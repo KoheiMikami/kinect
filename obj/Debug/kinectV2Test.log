@@ -1,7 +1,7 @@
-﻿2015/08/19 20:53:47 にビルドを開始しました。
+﻿2015/08/20 18:35:17 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\kinectV2Test.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥inc" /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\libs\glfw\include /I..\..\..\libs\openssl\include /I..\..\..\addons /I..\..\..\addons\ofxOpenCv\libs /I..\..\..\addons\ofxOpenCv\src /I..\..\..\addons\ofxOpenCv\libs\opencv /I..\..\..\addons\ofxOpenCv\libs\opencv\include /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2 /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video /I..\..\..\addons\ofxOpenCv\libs\opencv\lib /I..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\ofApp.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥inc" /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\libs\glfw\include /I..\..\..\libs\openssl\include /I..\..\..\addons /I..\..\..\addons\ofxOpenCv\libs /I..\..\..\addons\ofxOpenCv\src /I..\..\..\addons\ofxOpenCv\libs\opencv /I..\..\..\addons\ofxOpenCv\libs\opencv\include /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2 /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts /I..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video /I..\..\..\addons\ofxOpenCv\libs\opencv\lib /I..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\main.cpp src\ofApp.cpp
          ofApp.cpp
      1>c:\users\staff\desktop\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(126): warning C4250: 'Poco::InputStreamConverter' : 2 つ以上のメンバーが同じ名前を持っています。'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' から継承します。
                  with
@@ -28,26 +28,63 @@
                      _Traits=std::char_traits<char>
                  ]
      1>c:\users\staff\desktop\of_v0.8.4_vs_release\addons\ofxopencv\libs\opencv\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(52): error C2065: 'ComPtr' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(52): error C2275: 'IColorFrame' : この型は演算子として使用できません
-                 c:\program files\microsoft sdks\kinect\v2.0_1409\inc\kinect.h(2548) : 'IColorFrame' の宣言を確認してください。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(52): error C2065: 'colorFrame' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(53): error C2065: 'result' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(53): error C2065: 'colorReader' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(53): error C2227: '->AcquireLatestFrame' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
-                 型は ''unknown-type'' です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(53): error C2065: 'colorFrame' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(54): error C2065: 'result' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(55): error C2065: 'ofxKinectv2Lock' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(55): error C2146: 構文エラー : ';' が、識別子 'scopedLock' の前に必要です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(55): error C2065: 'mutex' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(55): error C3861: 'scopedLock': 識別子が見つかりませんでした
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(56): error C2065: 'result' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(56): error C2065: 'colorFrame' : 定義されていない識別子です。
-     1>c:\users\staff\desktop\of_v0.8.4_vs_release\apps\myapps\kinectv2test\src\ofapp.cpp(56): error C2227: '->CopyConvertedFrameDataToArray' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
-                 型は ''unknown-type'' です。
-     1>プロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\kinectV2Test.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+         コードを生成中...
+         コンパイル中...
+         main.cpp
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(126): warning C4250: 'Poco::InputStreamConverter' : 2 つ以上のメンバーが同じ名前を持っています。'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' から継承します。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\istream(74) : 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' の宣言を確認してください。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(144): warning C4250: 'Poco::OutputStreamConverter' : 2 つ以上のメンバーが同じ名前を持っています。'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' から継承します。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(90) : 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' の宣言を確認してください。
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\staff\desktop\of_v0.8.4_vs_release\addons\ofxopencv\libs\opencv\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+         コードを生成中...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\kinectV2Test_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\¥lib¥x86" /LIBPATH:..\..\..\libs\glut\lib\vs /LIBPATH:..\..\..\libs\glfw\lib\vs /LIBPATH:..\..\..\libs\rtAudio\lib\vs /LIBPATH:..\..\..\libs\FreeImage\lib\vs /LIBPATH:..\..\..\libs\freetype\lib\vs /LIBPATH:..\..\..\libs\quicktime\lib\vs /LIBPATH:..\..\..\libs\fmodex\lib\vs /LIBPATH:..\..\..\libs\videoInput\lib\vs /LIBPATH:..\..\..\libs\cairo\lib\vs /LIBPATH:..\..\..\libs\glew\lib\vs /LIBPATH:..\..\..\libs\glu\lib\vs /LIBPATH:..\..\..\libs\openssl\lib\vs /LIBPATH:..\..\..\libs\Poco\lib\vs /LIBPATH:..\..\..\libs\tess2\lib\vs /LIBPATH:..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs Kinect20.lib "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInputD.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib ssleay32MD.lib libeay32MD.lib crypt32.lib PocoFoundationmdd.lib PocoNetmdd.lib PocoUtilmdd.lib PocoXMLmdd.lib Ws2_32.lib tess2.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opencv_calib3d231d.lib opencv_contrib231d.lib opencv_core231d.lib opencv_features2d231d.lib opencv_flann231d.lib opencv_gpu231d.lib opencv_haartraining_engined.lib opencv_highgui231d.lib opencv_imgproc231d.lib opencv_legacy231d.lib opencv_ml231d.lib opencv_objdetect231d.lib opencv_video231d.lib zlibd.lib /NODEFAULTLIB:PocoFoundationmdd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:msvcrt /NODEFAULTLIB:libcmt /NODEFAULTLIB:LIBC /NODEFAULTLIB:LIBCMTD /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"bin\kinectV2Test_debug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"bin\kinectV2Test_debug.lib" /MACHINE:X86 /SAFESEH obj\Debug\icon.res
+         obj\Debug\main.obj
+         obj\Debug\ofApp.obj
+         obj\Debug\ofxCvColorImage.obj
+         obj\Debug\ofxCvContourFinder.obj
+         obj\Debug\ofxCvFloatImage.obj
+         obj\Debug\ofxCvGrayscaleImage.obj
+         obj\Debug\ofxCvHaarFinder.obj
+         obj\Debug\ofxCvImage.obj
+         obj\Debug\ofxCvShortImage.obj
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\libs\openFrameworksCompiled\lib\vs\openframeworksLib_debug.lib
+         kinectV2Test.vcxproj -> C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\bin\kinectV2Test_debug.exe
+       PostBuildEvent:
+         xcopy /e /i /y "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\*.dll" "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\bin"
+         :VCEnd
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\Assimp32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\fmodex.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\fmodexL.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\FreeImage.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\FreeType-6.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\glut32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\libeay32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\ssleay32.dll
+         C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\..\..\..\export\vs\Zlib.dll
+         9 個のファイルをコピーしました
+     1>プロジェクト "C:\Users\staff\Desktop\of_v0.8.4_vs_release\apps\myApps\kinectV2Test\kinectV2Test.vcxproj" (Build ターゲット) のビルドが完了しました。
 
-ビルドに失敗しました。
+ビルドに成功しました。
 
-経過時間 00:00:03.73
+経過時間 00:00:10.46

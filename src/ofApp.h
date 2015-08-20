@@ -4,9 +4,19 @@
 #include "ofxOpenCv.h"
 #include <kinect.h>
 #include <Windows.h>
+//#include "ComPtr.h"
 
 const int kinectWidth = 1920;
 const int kinectHeight = 1080;
+
+template<class Interface>
+inline void SafeRelease( Interface *& pInterfaceToRelease )
+{
+	if( pInterfaceToRelease != NULL ){
+		pInterfaceToRelease->Release();
+		pInterfaceToRelease = NULL;
+	}
+}
 
 class ofApp : public ofBaseApp{
 
@@ -25,6 +35,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		bool initKinect();
+
 		//Sencer
 		IKinectSensor *pSensor;
 
@@ -33,10 +45,11 @@ class ofApp : public ofBaseApp{
 
 		//Reader
 		IColorFrameReader *pColorReader;
-		
-		ofImage colorImage;
-
+	
+		//ƒTƒCƒY‚È‚ÇŽæ“¾
 		IFrameDescription* colorDescription;
 		int colorWidth, colorHeight;
 		unsigned int colorBytesPerPixels;
+
+		ofImage colorImage;
 };

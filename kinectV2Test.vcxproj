@@ -103,6 +103,7 @@
     <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ComPtr.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" />
     <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.h" />
