@@ -10,18 +10,58 @@ void ofApp::setup(){
 	}
 
 	colorImage.allocate(colorWidth,colorHeight,OF_IMAGE_COLOR_ALPHA);	
+	bodyIndexImage.allocate(512,424,OF_IMAGE_COLOR_ALPHA);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	// Frame
+	// color
 	IColorFrame* pColorFrame = nullptr;
 	HRESULT hResult  = pColorReader->AcquireLatestFrame( &pColorFrame );
+
 	if( SUCCEEDED( hResult ) ) {
 		hResult = pColorFrame->CopyConvertedFrameDataToArray(colorHeight * colorWidth * colorBytesPerPixels, colorImage.getPixels(), ColorImageFormat_Rgba);
 		colorImage.update();
 	}
-	SafeRelease( pColorFrame );	
+	
+	//bodyindex
+	IBodyIndexFrame *pBodyIndexFrame  = nullptr;
+	hResult = pBodyIndexReader->AcquireLatestFrame( &pBodyIndexFrame );
+
+	
+	int width = 512;
+	int height  = 424;
+	if (SUCCEEDED(hResult)) {
+		unsigned int bufferSize = 0;
+		unsigned char* buffer = nullptr;
+
+		//bodyindex‚ÌŽæ“¾
+		hResult = pBodyIndexFrame->AccessUnderlyingBuffer( &bufferSize, &buffer );
+		
+		
+		if( SUCCEEDED( hResult ) ){
+			unsigned char *data = bodyIndexImage.getPixels();
+
+			for( int y = 0; y < 424;  y++ ){
+				for( int x = 0; x < 512;  x++ ){
+					unsigned int  index = y * width + x;
+
+					//”ñl•¨—Ìˆæ‚ª0xff
+					if( buffer[index] != 0xff ){
+						data[index] = 255;
+					}else{
+						data[index] = 0;
+					}
+				}
+				bodyIndexImage.update();
+			}
+		}
+
+	}
+
+	//‰ð•ú
+	SafeRelease( pColorFrame );
+	SafeRelease( pBodyIndexFrame );
 }
 
 //--------------------------------------------------------------
@@ -30,6 +70,8 @@ void ofApp::draw(){
 
 	colorImage.draw(0, 0, colorImage.getWidth(), colorImage.getHeight());
 
+	ofSetColor(0);
+	bodyIndexImage.draw(0,0,512,424);
 }
 
 bool ofApp::initKinect() {
@@ -37,7 +79,7 @@ bool ofApp::initKinect() {
 	HRESULT hResult = S_OK;
 	hResult = GetDefaultKinectSensor(&pSensor);
 	if (FAILED(hResult)) {
-		 std::cerr << "Error : GetDefaultKinectSensor" << std::endl;
+		std::cerr << "Error : GetDefaultKinectSensor" << std::endl;
 		return -1;
 	}
 
@@ -50,8 +92,13 @@ bool ofApp::initKinect() {
 
 	//source‚ðŽæ“¾
 	hResult = pSensor->get_ColorFrameSource( &pColorSource ); 
-		if( FAILED( hResult ) ){
+	if( FAILED( hResult ) ){
 		std::cerr << "Error : IKinectSensor::get_ColorFrameSource()" << std::endl;
+		return -1;
+	}
+	hResult = pSensor->get_BodyIndexFrameSource( &pBodyIndexSource ); 
+	if( FAILED( hResult ) ){
+		std::cerr << "Error : IKinectSensor::get_BodyIndexFrameSource()" << std::endl;
 		return -1;
 	}
 
@@ -59,6 +106,12 @@ bool ofApp::initKinect() {
 	hResult = pColorSource->OpenReader( &pColorReader );
 	if( FAILED( hResult ) ){
 		std::cerr << "Error : IColorFrameSource::OpenReader()" << std::endl;
+		return -1;
+	}
+
+	hResult = pBodyIndexSource->OpenReader( &pBodyIndexReader ); 
+	if( FAILED( hResult ) ){
+		std::cerr << "Error : IBodyIndexFrameSource::OpenReader()" << std::endl;
 		return -1;
 	}
 
@@ -71,6 +124,14 @@ bool ofApp::initKinect() {
 	colorDescription->get_Width( &colorWidth );
 	colorDescription->get_Height( &colorHeight );
 	colorDescription->get_BytesPerPixel( &colorBytesPerPixels);
+
+	int bodyWidth = 0;
+	int bodyHeight = 0;
+	hResult = pBodyIndexSource -> get_FrameDescription(&bodyIndexDescrip);
+	bodyIndexDescrip -> get_Width(&bodyWidth);
+	bodyIndexDescrip -> get_Height(&bodyHeight);
+	cout << bodyWidth << endl;
+	cout << bodyHeight << endl;
 
 	return 0;
 }

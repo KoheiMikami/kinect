@@ -42,14 +42,19 @@ class ofApp : public ofBaseApp{
 
 		//Source
 		IColorFrameSource *pColorSource;
+		IBodyIndexFrameSource *pBodyIndexSource;
 
 		//Reader
 		IColorFrameReader *pColorReader;
+		IBodyIndexFrameReader  * pBodyIndexReader;
 	
 		//ƒTƒCƒY‚È‚ÇŽæ“¾
 		IFrameDescription* colorDescription;
 		int colorWidth, colorHeight;
 		unsigned int colorBytesPerPixels;
 
+		IFrameDescription *bodyIndexDescrip;
+
 		ofImage colorImage;
+		ofImage bodyIndexImage;
 };
