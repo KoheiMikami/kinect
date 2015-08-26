@@ -37,6 +37,9 @@ class ofApp : public ofBaseApp{
 
 		bool initKinect();
 
+		//ç¿ïW
+		ICoordinateMapper *coorinateMapper;
+
 		//Sencer
 		IKinectSensor *pSensor;
 

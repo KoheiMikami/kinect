@@ -17,6 +17,10 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	//座標
+	coorinateMapper = nullptr;
+	
+
 	// color
 	IColorFrame* pColorFrame = nullptr;
 	HRESULT hResult  = pColorReader->AcquireLatestFrame( &pColorFrame );
@@ -101,6 +105,9 @@ void ofApp::draw(){
 }
 
 bool ofApp::initKinect() {
+	//座標変換インタフェースを取得
+	pSensor -> get_CoordinateMapper(&coorinateMapper);
+
 	//sensorを取得
 	HRESULT hResult = S_OK;
 	hResult = GetDefaultKinectSensor(&pSensor);
