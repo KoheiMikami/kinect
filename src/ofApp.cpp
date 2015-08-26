@@ -11,6 +11,8 @@ void ofApp::setup(){
 
 	colorImage.allocate(colorWidth,colorHeight,OF_IMAGE_COLOR_ALPHA);	
 	bodyIndexImage.allocate(512,424,OF_IMAGE_COLOR_ALPHA);
+	depthImage.allocate(512,424,OF_IMAGE_GRAYSCALE);
+
 }
 
 //--------------------------------------------------------------
@@ -28,7 +30,22 @@ void ofApp::update(){
 	IBodyIndexFrame *pBodyIndexFrame  = nullptr;
 	hResult = pBodyIndexReader->AcquireLatestFrame( &pBodyIndexFrame );
 
+	//Depth
+	IDepthFrame *pDepthFrame = nullptr;
+	hResult = pDepthReader -> AcquireLatestFrame(&pDepthFrame);
+	if (SUCCEEDED(hResult)) {
+		UINT16 * depthBuffer = nullptr;
+		hResult = pDepthFrame -> AccessUnderlyingBuffer(&depthBufferSize,&depthBuffer);
+		if (SUCCEEDED(hResult)) {
+			for (int i = 0; i < depthBufferSize; i++) {
+				depthImage.getPixels()[i] = ((depthBuffer[i] * 255)/8000);
+			}
+			depthImage.update();
+		}
+	}
+
 	
+	//bodyIndex
 	int width = 512;
 	int height  = 424;
 	if (SUCCEEDED(hResult)) {
@@ -48,9 +65,9 @@ void ofApp::update(){
 
 					//非人物領域が0xff
 					if( buffer[index] != 0xff ){
-						data[index* 4] = 255;
-						data[index * 4 + 1] = 255;
-						data[index * 4 + 2] = 255;
+						data[index* 4] = 0;
+						data[index * 4 + 1] = 0;
+						data[index * 4 + 2] = 0;
 						data[index  * 4+ 3] = 255;
 
 					}else{
@@ -69,6 +86,7 @@ void ofApp::update(){
 	//解放
 	SafeRelease( pColorFrame );
 	SafeRelease( pBodyIndexFrame );
+	SafeRelease(pDepthFrame);
 }
 
 //--------------------------------------------------------------
@@ -77,8 +95,9 @@ void ofApp::draw(){
 
 	colorImage.draw(0, 0, colorImage.getWidth(), colorImage.getHeight());
 
-	ofSetColor(0);
+	ofSetColor(255);
 	bodyIndexImage.draw(0,0,512,424);
+	depthImage.draw(0,424,512,424);
 }
 
 bool ofApp::initKinect() {
@@ -108,6 +127,11 @@ bool ofApp::initKinect() {
 		std::cerr << "Error : IKinectSensor::get_BodyIndexFrameSource()" << std::endl;
 		return -1;
 	}
+	hResult = pSensor->get_DepthFrameSource(&pDepthSource);
+	if( FAILED( hResult ) ){
+		std::cerr << "Error : IKinectSensor::get_DepthFrameSource()" << std::endl;
+		return -1;
+	}
 
 	//Readerを開く
 	hResult = pColorSource->OpenReader( &pColorReader );
@@ -122,6 +146,12 @@ bool ofApp::initKinect() {
 		return -1;
 	}
 
+	hResult = pDepthSource -> OpenReader(&pDepthReader);
+	if( FAILED( hResult ) ){
+		std::cerr << "Error : IDepthSource::OpenReader()" << std::endl;
+		return -1;
+	}
+
 	//サイズとか取得
 	hResult = pColorSource->CreateFrameDescription(ColorImageFormat::ColorImageFormat_Rgba, &colorDescription );
 	if(FAILED(hResult)){
@@ -132,13 +162,13 @@ bool ofApp::initKinect() {
 	colorDescription->get_Height( &colorHeight );
 	colorDescription->get_BytesPerPixel( &colorBytesPerPixels);
 
-	int bodyWidth = 0;
-	int bodyHeight = 0;
-	hResult = pBodyIndexSource -> get_FrameDescription(&bodyIndexDescrip);
-	bodyIndexDescrip -> get_Width(&bodyWidth);
-	bodyIndexDescrip -> get_Height(&bodyHeight);
-	cout << bodyWidth << endl;
-	cout << bodyHeight << endl;
+	hResult = pDepthSource -> get_FrameDescription(&depthDescriprion);
+	if (FAILED(hResult)) {
+		return -1;
+	}
+	depthDescriprion -> get_Width(&depthWidth);
+	depthDescriprion -> get_Height(&depthHeight);
+	depthDescriprion->get_BytesPerPixel(&depthBufferSize);
 
 	return 0;
 }

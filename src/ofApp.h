@@ -43,18 +43,26 @@ class ofApp : public ofBaseApp{
 		//Source
 		IColorFrameSource *pColorSource;
 		IBodyIndexFrameSource *pBodyIndexSource;
+		IDepthFrameSource *pDepthSource;
 
 		//Reader
 		IColorFrameReader *pColorReader;
 		IBodyIndexFrameReader  * pBodyIndexReader;
+		IDepthFrameReader *pDepthReader;
 	
-		//サイズなど取得
+		//カラーのサイズなど取得
 		IFrameDescription* colorDescription;
 		int colorWidth, colorHeight;
 		unsigned int colorBytesPerPixels;
+
+		//デプスのサイズなどの取得
+		IFrameDescription *depthDescriprion;
+		int depthWidth, depthHeight;
+		unsigned int depthBufferSize;
 
 		IFrameDescription *bodyIndexDescrip;
 
 		ofImage colorImage;
 		ofImage bodyIndexImage;
+		ofImage depthImage;
 };
