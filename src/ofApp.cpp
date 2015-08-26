@@ -48,9 +48,16 @@ void ofApp::update(){
 
 					//”ñl•¨—Ìˆæ‚ª0xff
 					if( buffer[index] != 0xff ){
-						data[index] = 255;
+						data[index* 4] = 255;
+						data[index * 4 + 1] = 255;
+						data[index * 4 + 2] = 255;
+						data[index  * 4+ 3] = 255;
+
 					}else{
-						data[index] = 0;
+						data[index* 4] = 0;
+						data[index * 4 + 1] = 0;
+						data[index * 4 + 2] = 0;
+						data[index  * 4+ 3] = 0;
 					}
 				}
 				bodyIndexImage.update();
