@@ -37,7 +37,7 @@ class ofApp : public ofBaseApp{
 
 		bool initKinect();
 
-		//座標
+		//座標変換
 		ICoordinateMapper *coorinateMapper;
 
 		//Sencer
@@ -53,19 +53,26 @@ class ofApp : public ofBaseApp{
 		IBodyIndexFrameReader  * pBodyIndexReader;
 		IDepthFrameReader *pDepthReader;
 	
-		//カラーのサイズなど取得
+		//カラーの色々取得
 		IFrameDescription* colorDescription;
 		int colorWidth, colorHeight;
 		unsigned int colorBytesPerPixels;
 
-		//デプスのサイズなどの取得
+		//デプスの色々取得
 		IFrameDescription *depthDescriprion;
 		int depthWidth, depthHeight;
 		unsigned int depthBufferSize;
-
+		
+		//BodyIndexの色々取得
 		IFrameDescription *bodyIndexDescrip;
+		int bodyIndexWidth,bodyIndexHeight;
+		unsigned int bodyIndexBufferSize;
+
+		vector<BYTE> colorBuffer;
+
 
 		ofImage colorImage;
 		ofImage bodyIndexImage;
 		ofImage depthImage;
+		ofImage kirinukiImage;
 };
